@@ -1,6 +1,7 @@
-    *{
+*{
     padding: 0;
     margin: 0;
+    justify-content: center;
 }
 body{
     width: 800px;
@@ -13,15 +14,17 @@ button{
     height: 100px;
     background: none;
     border: none;
-    justify-content: center;
-    margin-left: 55%;
-    margin-top: 60%;
+    float: left;
+}
+
+#Pasek{
+    margin-top: 1%;
+    margin-left: 42.5%;
 }
 
 button img{
     width: 80px;
     height: 80px;
-    content: url('./img/play.png');
 }
 
 .Stop{
@@ -29,3 +32,46 @@ button img{
     height: 80px;
     content: url('./img/stop.png');
 }
+
+#Stacja{
+    width: 300px;
+    height: 300px;
+    margin-left: 42.5%;
+    margin-top: 10%;
+    text-align: center;
+    clear: both;
+    color: white;
+}
+
+#imgStacja{
+    width: 250px; 
+    height: 250px;
+}
+
+#glos{
+    margin-top: 9%;
+    margin-left: 23%;
+}
+
+.slider {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 100%; 
+    height: 15px; 
+    background: linear-gradient(to right, rgba(6,223,23,1) 50%, grey 50%);
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+}
+

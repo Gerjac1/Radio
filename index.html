@@ -2,10 +2,23 @@
 <html lang="pl">
     <head>
         <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="stylesheet" href="./index.css">
         <script src="index.js"></script>
     </head>
-    <body>
-        <button id="play" onclick="ChangeImage()"><img id="playImg"></img></button>
+    <body onload="SlideBar();">
+        <div id="Stacja">
+            <img id="imgStacja" src="./img/Back.png"></img>
+            <h1>Nazwa stacji</h1>
+            <h2>Informacje o granej muzyce</h2>
+        </div>
+        <div id="glos">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <div id="Pasek">
+            <button id="back"><img src="./img/Back.png"></img></button>
+            <button id="play" onclick="ChangeImage()"><img id="playImg" src="./img/play.png"></img></button>
+            <button id="next"><img src="./img/Next.png"></img></button>
+        </div>
     </body>
 </html>
