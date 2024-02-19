@@ -1,0 +1,31 @@
+    *{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 800px;
+    height: 480px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,4,74,1) 100%, rgba(0,212,255,1) 100%);
+}
+button{
+    width: 100px;
+    height: 100px;
+    background: none;
+    border: none;
+    justify-content: center;
+    margin-left: 55%;
+    margin-top: 60%;
+}
+
+button img{
+    width: 80px;
+    height: 80px;
+    content: url('./img/play.png');
+}
+
+.Stop{
+    width: 80px;
+    height: 80px;
+    content: url('./img/stop.png');
+}
