@@ -78,3 +78,20 @@ button img{
     cursor: pointer;
 }
 
+#volume{
+    color: white;
+    margin-top: -4%;
+    margin-bottom: 2%;
+}
+
+#mute {
+    width: 100px;
+    height: 100px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#mute img{
+    width: 80px;
+    height: 80px;
+}
