@@ -7,22 +7,25 @@
     font-family: "Roboto";
 }
 body{
-    width: 800px;
-    height: 480px;
+    width: 700px;
+    height: 200px;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,4,74,1) 100%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgb(1, 68, 107) 0%, rgba(4,4,74,1) 100%, rgba(0,212,255,1) 100%);
+    margin-bottom: 10%;
 }
 button{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background: none;
     border: none;
     float: left;
 }
 
 #Pasek{
-    margin-top: 1%;
-    margin-left: 42.5%;
+    width: 300px;
+    height: 80px;
+    margin-top: 2.5%;
+    margin-left: 55.75%;
 }
 
 button img{
@@ -37,18 +40,17 @@ button img{
 }
 
 #Stacja{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin-left: 42.5%;
-    margin-top: 10%;
     text-align: center;
     clear: both;
     color: white;
 }
 
 #imgStacja{
-    width: 250px; 
-    height: 250px;
+    width: 200px; 
+    height: 200px;
 }
 
 #glos{
@@ -85,13 +87,25 @@ button img{
 }
 
 #mute {
-    width: 100px;
-    height: 100px;
-    margin-left: 5%;
-    margin-top: 5%;
+    width: 80px;
+    height: 80px;
+    margin-left: 7%;
+    margin-top: 6%;
 }
 
 #mute img{
     width: 80px;
     height: 80px;
+}
+
+.muted{
+    content: url('./img/Muted.png');
+}
+
+#back{
+    margin-left: -30%;
+}
+
+#next{
+    margin-left: 3%;
 }
