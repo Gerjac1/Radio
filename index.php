@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="./CSS/index.css">
+        <link rel="stylesheet" href="./index.css">
         <script src="./JS/index.js"></script>
     </head>
     <body onload="SlideBar();volume();">
@@ -20,7 +20,7 @@
         </div>
         <div id="Pasek">
             <button id="back" onclick="PrevMusic();"><img src="./image/Back.png"></img></button>
-            <button id="play" onclick="ChangeImage();Play();"><img id="playImg" src="./image/play.png" class="Stop"></img></button>
+            <button id="play" onclick="Play();"><img id="playImg" src="image/play.png"></img></button>
             <button id="next" onclick="NextMusic();"><img src="./image/Next.png"></img></button>
         </div>
     </body>

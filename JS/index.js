@@ -1,12 +1,3 @@
-function ChangeImage(){
-    const newLocal = document.getElementById("playImg");
-    var playbutton = newLocal;
-    if(playbutton.classList.contains("Stop")){
-        playbutton.classList.remove("Stop");
-    }
-    else playbutton.classList.add("Stop");
-}
-
 function volume(){
     var RangeValue = document.getElementById("myRange").value;
     var wynik = document.getElementById("volume");
@@ -58,10 +49,44 @@ function zmien() {
 }
 
 function pokaz_stacje() {
+    var imgStacja = document.getElementById("imgStacja");
+    const playImg = document.getElementById("playImg");
+    var playbutton = playImg;
+    var ifChanged = false;
     var xmlhttp = new XMLHttpRequest(); 
     xmlhttp.onreadystatechange = function() {   
-      if (this.readyState == 4 && this.status == 200) {   
-            document.getElementById("NazwaStacji").innerHTML = this.responseText; 
+      if (this.readyState == 4 && this.status == 200) {
+        if(this.responseText.includes("<br>Radio Nowy Świat")) {
+            imgStacja.src="./image/Radia/NowySwiat.png";  
+            ifChanged = true;
+        } 
+        if(this.responseText.includes("RMF Classic")) { 
+            imgStacja.src="./image/Radia/rmfclassic.png"; 
+            ifChanged = true;
+        } 
+        if(this.responseText.includes("SmoothJazz")) { 
+            imgStacja.src="./image/Radia/SmoothJazz.png"; 
+            ifChanged = true;
+        } 
+        if(this.responseText.includes("Classic.nl")) { 
+            imgStacja.src="./image/Radia/classicnl.png";  
+            ifChanged = true;
+        } 
+        if(this.responseText.includes("RADIO 357")) { 
+            imgStacja.src="./image/Radia/Radio357.png";  
+            ifChanged = true;
+        }
+        if(this.responseText.includes("Muzo FM")) { 
+            imgStacja.src="./image/Radia/MuzoFM.png";
+            ifChanged = true;
+        } 
+        if(!ifChanged){
+            imgStacja.src="./image/Back.png";
+        }
+        document.getElementById("NazwaStacji").innerHTML = this.responseText; 
+        if(this.responseText.includes("Brak stacji")){
+            playbutton.classList.remove("Stop");
+        } else playbutton.classList.add("Stop");
       }
     };
     xmlhttp.open("GET", "./PHP/current_station.php", true);  
