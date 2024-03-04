@@ -7,10 +7,17 @@ exec($command,$output,$retvalue);
 $stacja=$output[0];
 //echo $stacja;
 switch ($stacja) {
+    case "1":
+        $output=null;
+        $retvalue=null;
+        $command="mpc status |head -n 1 | cut -d ':' -f2- |cut -d '-' -f1,1";
+        exec($command,$output,$retvalue);
+        $opis=$output[0];
+        break;
     case "2":
         $output=null;
         $retvalue=null;
-        $command="mpc status |head -n 1 | cut -d: -f2- |cut -d '|' -f1,2";
+        $command="mpc status |head -n 1 | cut -d: -f2- |cut -d '|' -f1,1";
         exec($command,$output,$retvalue);
         $opis=$output[0];
         break;

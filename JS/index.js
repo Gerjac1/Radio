@@ -143,8 +143,10 @@ function aktualnyCzas() {
     var dzisiaj = new Date();
     var godzina = dzisiaj.getHours();
     var minuty = dzisiaj.getMinutes();
+    var sekundy = dzisiaj.getSeconds();
    
     minuty = dodajZero(minuty);
+    sekundy = dodajZero(sekundy);
     
     var czas = godzina + ":" + minuty;
     
@@ -156,4 +158,25 @@ function dodajZero(i) {
       i = "0" + i;
     }
     return i;
+}
+
+function toggleScreensaver(){
+    var screensaver = document.querySelector('.screensaver');
+    var idleTime=0;
+    var idleInterval = setInterval(timerIncrement, 1000);
+    window.addEventListener("mousemove", resetTimer);
+    window.addEventListener("keypress", resetTimer);
+
+    function resetTimer(){
+        idleTime = 0;
+        $(':button').prop('disabled', false);
+    }
+    function timerIncrement(){
+        idleTime++;
+        buttons.disabled = false;
+        if(idleTime>5){
+            screensaver.style.opacity=1;
+            $(':button').prop('disabled', true);
+        }
+    }
 }
