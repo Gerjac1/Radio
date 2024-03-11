@@ -83,7 +83,7 @@ button img{
 
 #volume{
     color: white;
-    margin-top: -4%;
+    margin-top: -4.5%;
     margin-bottom: 2%;
 }
 
@@ -91,7 +91,7 @@ button img{
     width: 80px;
     height: 80px;
     margin-left: 7%;
-    margin-top: 6%;
+    margin-top: 5%;
 }
 
 #mute img{
@@ -128,4 +128,34 @@ button img{
     pointer-events: none;
     z-index: 9999;
     transition: opacity 1s;
+}
+
+#schedule{
+    margin-top: -25%;
+    margin-left: 6%;
+}
+
+#btnschedule{
+    float: none;
+}
+
+#schedule button img{
+    width: 80px;
+    height: 80px;
+}
+
+#popup{
+    opacity: 1;
+    width: 150px;
+    height: 100px;
+    background: linear-gradient(90deg, rgb(1, 68, 107) 0%, rgba(4,4,74,1) 100%, rgba(0,212,255,1) 100%);
+    transition: opacity 1s;
+}
+
+.hiden{
+    opacity: 0 !important;
+}
+
+#muteTime, #startTime{
+    color-scheme: dark;
 }

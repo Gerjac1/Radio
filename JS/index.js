@@ -23,6 +23,7 @@ function Mute(){
         volume();
         Range.style.background='linear-gradient(to right, rgba(6,223,23,1)'+ Range.value +'%, grey 0%)';
         mutebutton.classList.remove("muted");
+        Range.disabled = false;
     }
     else{
         RangeValue = document.getElementById("myRange").value;
@@ -30,6 +31,7 @@ function Mute(){
         Range.value=0;
         volume();
         mutebutton.classList.add("muted");
+        Range.disabled = true;
     }
 }
 
@@ -169,14 +171,67 @@ function toggleScreensaver(){
 
     function resetTimer(){
         idleTime = 0;
-        $(':button').prop('disabled', false);
     }
     function timerIncrement(){
         idleTime++;
-        buttons.disabled = false;
-        if(idleTime>5){
+        if(idleTime>10){
             screensaver.style.opacity=1;
-            $(':button').prop('disabled', true);
         }
+        else screensaver.style.opacity=0;
+    }
+}
+
+function ShowWindow(){
+    const popup = document.getElementById("popup");
+    var Vpopup = popup;
+    if(Vpopup.classList.contains("hiden")){
+        Vpopup.classList.remove("hiden");
+    } else Vpopup.classList.add("hiden");
+}
+
+var i=0;
+var d=0;
+function CheckHours(){
+    var muteTime = document.getElementById("muteTime").value;
+    var startTime = document.getElementById("startTime").value;
+    var dzisiaj = new Date();
+    var godzina = dzisiaj.getHours();
+    var minuty = dzisiaj.getMinutes();
+    var czas = godzina + ":" + minuty;
+    const newLocal = document.getElementById("muteImg");
+    var mutebutton = newLocal;
+    if(muteTime!=""){
+        $.cookie("muteTime", muteTime)
+    }
+    if(startTime!=""){
+        $.cookie("startTime", startTime)
+    }
+    if(muteTime==czas && !mutebutton.classList.contains("muted") && i == 0){
+        Mute();
+        zmien();
+        i++;
+        setTimeout( (i) => i=0, 60000);
+    }
+    if(startTime==czas && mutebutton.classList.contains("muted") && d == 0){
+        Mute();
+        zmien();
+        d++;
+        setTimeout( (d) => d=0, 60000);
+    }
+}
+
+function CheckCookies(){
+    var muteTime = document.getElementById("muteTime").value;
+    var startTime = document.getElementById("startTime").value;
+    const popup = document.getElementById("popup");
+    var Vpopup = popup;
+    var muteTimeValue = $.cookie("muteTime");
+    var startTimeValue = $.cookie("startTime");
+
+    if(muteTimeValue!=""){
+        document.getElementById("muteTime").value=muteTimeValue;
+    }
+    if(startTimeValue!=""){
+        document.getElementById("startTime").value=startTimeValue;
     }
 }

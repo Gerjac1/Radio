@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src=".\JQuery\src\jquery.cookie.js"></script>
         <link rel="stylesheet" href="./index.css">
         <script src="./JS/index.js"></script>
     </head>
@@ -10,9 +11,16 @@
     <div class="screensaver"><iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:150px;height:150px; margin-top:21%; margin-left:41.5%"src="https://www.clocklink.com/html5embed.php?clock=024&timezone=MOT&color=black&size=150&Title=&Message=&Target=&From=2024,1,1,0,0,0&Color=black"></iframe></div>
         <div id="czas"></div>
         <div id="Stacja">
-            <image id="imgStacja" src="./image/Back.png"></img>
+            <img id="imgStacja" src="./image/Back.png"></img>
             <h3 id="NazwaStacji">Brak stacji</h3>
             <h3 id="song">Aktualnie nie gra żadna muzyka</h3>
+        </div>
+        <div id="schedule">
+            <button id="btnschedule" onclick="ShowWindow();"><image id="imgSchedule" src="./image/schedule.png"></img></button>
+            <div id="popup" class="hiden">
+            Godzina wyciszenia:<input id="muteTime" type="time"></input><br>
+            Godzina odciszenia:<input id="startTime" type="time" value=""></input><br>
+            </div>
         </div>
         <button id="mute" onclick="Mute();"><img id="muteImg" src="./image/unmuted.png"></img></button>
         <div id="glos">
@@ -31,5 +39,7 @@
         zmien();
         setInterval(pokaz_stacje, 100);
         setInterval(pokaz_utwor, 100);
+        setInterval(CheckHours, 1000);
+        setInterval(CheckCookies, 1000);
     </script>
 </html>
