@@ -228,10 +228,10 @@ function CheckCookies(){
     var muteTimeValue = $.cookie("muteTime");
     var startTimeValue = $.cookie("startTime");
 
-    if(muteTimeValue!=""){
+    if(muteTimeValue!="" && muteTimeValue!=undefined){
         document.getElementById("muteTime").value=muteTimeValue;
     }
-    if(startTimeValue!=""){
+    if(startTimeValue!="" && startTimeValue!=undefined){
         document.getElementById("startTime").value=startTimeValue;
     }
 }
