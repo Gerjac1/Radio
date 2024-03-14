@@ -58,7 +58,7 @@ function pokaz_stacje() {
     var xmlhttp = new XMLHttpRequest(); 
     xmlhttp.onreadystatechange = function() {   
       if (this.readyState == 4 && this.status == 200) {
-        if(this.responseText.includes("<br>Radio Nowy Świat")) {
+        if(this.responseText.includes("Radio Nowy Świat")) {
             imgStacja.src="./image/Radia/NowySwiat.png";  
             ifChanged = true;
         } 
