@@ -150,6 +150,7 @@ button img{
     height: 100px;
     background: linear-gradient(90deg, rgb(1, 68, 107) 0%, rgba(4,4,74,1) 100%, rgba(0,212,255,1) 100%);
     transition: opacity 1s;
+    border-radius: 8px;
 }
 
 .hiden{
