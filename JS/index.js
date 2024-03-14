@@ -235,3 +235,10 @@ function CheckCookies(){
         document.getElementById("startTime").value=startTimeValue;
     }
 }
+
+function reset(){
+    document.getElementById("muteTime").value="";
+    document.getElementById("startTime").value="";
+    $.cookie("muteTime", "");
+    $.cookie("startTime", "");
+}

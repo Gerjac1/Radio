@@ -20,6 +20,7 @@
             <div id="popup" class="hiden">
             Godzina wyciszenia:<input id="muteTime" type="time"></input><br>
             Godzina odciszenia:<input id="startTime" type="time" value=""></input><br>
+            <button id="reset" onclick="reset();">Reset</button>
             </div>
         </div>
         <button id="mute" onclick="Mute();"><img id="muteImg" src="./image/unmuted.png"></img></button>
