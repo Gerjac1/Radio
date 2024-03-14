@@ -10,7 +10,7 @@ switch ($stacja) {
     case "1":
         $output=null;
         $retvalue=null;
-        $command="mpc status |head -n 1 | cut -d ':' -f2- |cut -d '-' -f1,1";
+        $command="mpc status |head -n 1 | cut -d ':' -f2-";
         exec($command,$output,$retvalue);
         $opis=$output[0];
         break;
