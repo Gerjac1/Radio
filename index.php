@@ -9,6 +9,7 @@
     </head>
     <body onload="SlideBar();volume();toggleScreensaver();">
     <div class="screensaver"><iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:150px;height:150px; margin-top:21%; margin-left:41.5%"src="https://www.clocklink.com/html5embed.php?clock=024&timezone=MOT&color=black&size=150&Title=&Message=&Target=&From=2024,1,1,0,0,0&Color=black"></iframe></div>
+        <div id="ide8b3750ec2d3c" a='{"t":"s","v":"1.2","lang":"pl","locs":[4441],"ssot":"c","sics":"ds","cbkg":"#FFFFFF","cfnt":"#FFFFFF","slgp":"5","sfnt":"a"}' style="background: none; display: relative; width: 50px; height: 50px; left: 710px; top: -7.5px; padding: 0">Źródło danych pogodowych: <a href="https://sharpweather.com/weather_warsaw/30_days/">weather forecast Warsaw 30 days</a></div><script async src="https://static1.sharpweather.com/widgetjs/?id=ide8b3750ec2d3c"></script>
         <div id="czas"></div>
         <div id="Stacja">
             <img id="imgStacja" src="./image/Back.png"></img>

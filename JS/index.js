@@ -174,7 +174,7 @@ function toggleScreensaver(){
     }
     function timerIncrement(){
         idleTime++;
-        if(idleTime>10){
+        if(idleTime>30){
             screensaver.style.opacity=1;
         }
         else screensaver.style.opacity=0;

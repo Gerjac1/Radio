@@ -115,6 +115,7 @@ button img{
     color: white;
     font-weight: bold;
     font-size: 35px;
+    margin-top: -7.5%;
 }
 
 .screensaver{
@@ -167,4 +168,8 @@ button img{
     height: 15px;
     background: gray;
     border-radius: 2px;
+}
+
+#ide8b3750ec2d3c .wlSource{
+    display: none !important;
 }
